@@ -8,7 +8,9 @@ import javax.persistence.Table;
 
 import com.poiji.annotation.ExcelCellName;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
@@ -19,16 +21,16 @@ public class Invoice {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@ExcelCellName("id")
 	private Integer id;
-	
-	@ExcelCellName(value =  "name")
+
+	@ExcelCellName(value = "name")
 	private String name;
-	
+
 	@ExcelCellName(value = "amount")
 	private Double amount;
-	
+
 	@ExcelCellName(value = "number")
 	private String number;
-	
+
 	@ExcelCellName(value = "receiveDate")
 	private String receiveDate;
 
